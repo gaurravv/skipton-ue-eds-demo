@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Search Hero",
+    "id": "search-hero",
+    "plugins": {
+      "xwalk": {
+        "page": {
+          "resourceType": "skipton-ue-eds/components/searchhero",
+          "template": {
+            "name": "Search Hero",
+            "model": "search-hero"
+          }
+        }
+      }
+    }
+  },
+  {
+    "title": "Search Panel",
+    "id": "search-demo",
+    "plugins": {
+      "xwalk": {
+        "page": {
+          "resourceType": "skipton-ue-eds/components/searchpanel",
+          "template": {
+            "name": "Search Panel",
+            "model": "search-demo"
+          }
+        }
+      }
+    }
+  },
+  {
+    "title": "Sample Result",
+    "id": "sample-result",
+    "plugins": {
+      "xwalk": {
+        "page": {
+          "resourceType": "skipton-ue-eds/components/sampleresult",
+          "template": {
+            "name": "Sample Result",
+            "model": "sample-result"
+          }
+        }
+      }
+    }
+  },
+  {
+    "title": "AI Disclaimer",
+    "id": "ai-disclaimer",
+    "plugins": {
+      "xwalk": {
+        "page": {
+          "resourceType": "skipton-ue-eds/components/aidisclaimer",
+          "template": {
+            "name": "AI Disclaimer",
+            "model": "ai-disclaimer"
+          }
+        }
+      }
+    }
+  }
+]

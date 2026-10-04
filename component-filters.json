@@ -1,0 +1,11 @@
+[
+  {
+    "id": "skipton-ue-eds/components/page",
+    "components": [
+      "search-hero",
+      "search-demo",
+      "sample-result",
+      "ai-disclaimer"
+    ]
+  }
+]

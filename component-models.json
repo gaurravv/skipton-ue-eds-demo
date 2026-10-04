@@ -1,0 +1,82 @@
+[
+  {
+    "id": "search-hero",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Introduction",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "search-demo",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "label",
+        "label": "Search label",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "placeholder",
+        "label": "Input placeholder",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "buttonLabel",
+        "label": "Button label",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "helperText",
+        "label": "Helper text",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "sample-result",
+    "fields": [
+      {
+        "component": "text-input",
+        "name": "title",
+        "label": "Title",
+        "valueType": "string"
+      },
+      {
+        "component": "richtext",
+        "name": "description",
+        "label": "Description",
+        "valueType": "string"
+      },
+      {
+        "component": "text-input",
+        "name": "link",
+        "label": "Link",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "ai-disclaimer",
+    "fields": [
+      {
+        "component": "richtext",
+        "name": "text",
+        "label": "Disclaimer",
+        "valueType": "string"
+      }
+    ]
+  }
+]
