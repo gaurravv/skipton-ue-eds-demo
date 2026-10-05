@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties xmlns="http://www.day.com/jcr/vault/1.0">
+  <entry key="packageFormatVersion" value="2"/>
+  <entry key="group" value="skipton-demo"/>
+  <entry key="name" value="skipton-ue-eds.content"/>
+  <entry key="version" value="1.0.0-SNAPSHOT"/>
+  <entry key="description">AI-Powered Search UE page, nav and footer for the Skipton UE EDS demo</entry>
+</properties>
