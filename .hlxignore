@@ -5,3 +5,6 @@ LICENSE
 package.json
 package-lock.json
 test/*
+aem-package/*
+aem-content-package/*
+tools/*

@@ -42,6 +42,38 @@ The package creates no customer content and does not overwrite the existing
 **Create → Page → WKND UE EDS Page** under `/content/wknd/us/en` and create the
 pilot page as `ai-powered-search-ue`.
 
+Note: the WKND UE EDS Page template extends the classic Core Components page
+(`core/wcm/components/page/v3/page`), which Edge Delivery cannot render. Pages
+for this site should use the Edge Delivery page component
+(`core/franklin/components/page/v1/page`), as the content package below does.
+
+## Migrated content package
+
+`aem-content-package/` is a FileVault content package with the migrated
+Edge Delivery pages and the header/footer images:
+
+- `/content/wknd/us/en/ai-powered-search-ue`: the AI-Powered Search page
+  (Search Panel, title, image, Tabs);
+- `/content/wknd/nav` and `/content/wknd/footer`: header and footer content;
+- `/content/dam/skipton-ue-eds`: logos and social icons used by the nav and footer.
+
+Page images reference existing assets under `/content/dam/wknd-shared`. The
+filter only covers the paths above, so other WKND content is not touched.
+Build it with `mvn clean package` in `aem-content-package/` and upload the ZIP
+in Package Manager.
+
+## Connecting the repository to AEM author
+
+- `fstab.yaml` mounts the AEM author instance
+  `author-p133255-e1921317` as the content source.
+- `paths.json` maps `/content/wknd/` to `/`, so
+  `/content/wknd/us/en/ai-powered-search-ue` is served as
+  `/us/en/ai-powered-search-ue` and the nav/footer pages as `/nav` and `/footer`.
+
+The WKND site configuration (`/conf/wknd`) also needs an Edge Delivery Services
+configuration pointing at `gaurravv/skipton-ue-eds-demo`, so that Universal
+Editor loads the component configuration from this repository.
+
 ## Universal Editor configuration
 
 The component palette configuration is in:
@@ -52,9 +84,11 @@ component-models.json
 component-filters.json
 ```
 
-Register these files when creating the AEM Authoring EDS site, then open the
-new AEM page with **Edit in Universal Editor**. The configuration maps the
-palette entries to the resource types in `aem-package`.
+They define the Edge Delivery page, section, default content (text, title,
+image, button), and the Tabs and Search Demo blocks, along with the repository's
+cards, columns, fragment and hero blocks. The classic Search Hero, Search Panel,
+Sample Result and AI Disclaimer components from `aem-package` are kept in their
+own group for the WKND UE EDS Page template.
 
 ## Documentation
 

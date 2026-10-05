@@ -17,8 +17,14 @@ function createResult(result) {
 }
 
 export default function decorate(block) {
-  const [panelRow, resultsRow] = [...block.children];
-  const [labelCell, placeholderCell, buttonCell, helperCell] = [...(panelRow?.children || [])];
+  const rows = [...block.children];
+  // custom Search Panel component renders all fields in one row;
+  // the standard UE block renders one field per row
+  const singleRowPanel = rows[0]?.children.length > 1;
+  const [labelCell, placeholderCell, buttonCell, helperCell] = singleRowPanel
+    ? [...rows[0].children]
+    : rows.slice(0, 4).map((row) => row.firstElementChild);
+  const resultsRow = singleRowPanel ? rows[1] : null;
   const labelText = textFor(labelCell) || 'Find your next adventure';
   const placeholder = textFor(placeholderCell) || 'Try “family-friendly hiking”';
   const buttonText = textFor(buttonCell) || 'Search';
